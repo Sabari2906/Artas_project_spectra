@@ -1,0 +1,31 @@
+# Node.js dependencies - never push these
+server/node_modules/
+node_modules/
+
+# Environment variables - NEVER push (contains passwords!)
+server/.env
+.env
+
+# Database files - local only
+server/*.sqlite
+server/*.db
+server/*.db-shm
+server/*.db-wal
+
+# Flutter build output
+frontend/build/
+frontend/.dart_tool/
+frontend/.flutter-plugins-dependencies
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Logs
+*.log
+*.txt
+
+# OS files
+.DS_Store
+Thumbs.db
