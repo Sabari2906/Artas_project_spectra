@@ -54,12 +54,21 @@ Make sure the following are installed on your machine before starting:
 
 ### Step 1 — Configure Environment Variables
 
-Open `server/.env` and set your MySQL credentials:
+A template file `server/.env.example` is provided. Copy it and rename it to `.env`, then fill in your own credentials:
+
+```bash
+# In the server/ directory:
+copy .env.example .env
+```
+
+Then open `server/.env` and replace the placeholder values with your own:
 
 ```env
 PORT=5000
-MYSQL_URI="mysql://root:YourPasswordHere@localhost:3306/clinic"
+MYSQL_URI="mysql://YOUR_DB_USERNAME:YOUR_DB_PASSWORD@localhost:3306/clinic"
 ```
+
+> ⚠️ Never share your `.env` file or commit it to GitHub. It contains your database password.
 
 > Make sure the `clinic` database exists in MySQL. You can create it with:
 > ```sql
